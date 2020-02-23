@@ -13,7 +13,7 @@ public class FunctionalInterfaceExamples {
 	{
 		Map<String, Integer> nameMap = new HashMap<>();
 		Integer value = nameMap.computeIfAbsent("John", s -> s.length());
-		Integer value1 = nameMap.computeIfAbsent("John", String::length);
+		Integer value1 = nameMap.computeIfAbsent("John1", String::length);
 
 		System.out.println(value+","+value1);
 
@@ -37,7 +37,7 @@ public class FunctionalInterfaceExamples {
 		//Supliers
 		/*
 		 * The Supplier functional interface is yet another Function specialization that does not take any
-		 *  arguments. It is typically used for lazy generation of values. For instance, let’s define a 
+		 *  arguments. It is typically used for lazy generation of values. For instance, letï¿½s define a 
 		 *  function that squares a double value. It will receive not a value itself, but a Supplier of this
 		 *   value:
 		 * */

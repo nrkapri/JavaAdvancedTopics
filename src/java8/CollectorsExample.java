@@ -61,7 +61,9 @@ public class CollectorsExample {
 
 		//Add sorting.
 		
-		result.entrySet().stream().sorted(Map.Entry.<String, Long>comparingByValue().reversed())
+		result.entrySet().stream()
+		.sorted(Map.Entry.<String, Long>comparingByValue()
+				.reversed())
 		.forEach(x -> System.out.println(x));
 		
 		
@@ -86,14 +88,14 @@ public class CollectorsExample {
         System.out.println(counting);
 
 		
-		//Group by Price – Collectors.groupingBy and Collectors.mapping example.
+		//Group by Price ï¿½ Collectors.groupingBy and Collectors.mapping example.
 		
         Map<String, Integer> sum = items1.stream().collect(
                 Collectors.groupingBy(Item::getName, Collectors.summingInt(Item::getQty)));
         
         System.out.println(sum);
 
-		//Group by Price – Collectors.groupingBy and Collectors.mapping example.
+		//Group by Price ï¿½ Collectors.groupingBy and Collectors.mapping example.
         
         Map<BigDecimal, Set<String>> result1 =
                 items1.stream().collect(

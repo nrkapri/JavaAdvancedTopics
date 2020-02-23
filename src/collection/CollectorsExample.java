@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
 
-import com.google.common.collect.ImmutableList;
+//import com.google.common.collect.ImmutableList;
 
 public class CollectorsExample {
 
@@ -36,8 +36,7 @@ public class CollectorsExample {
 		
 		System.out.println(result4);
 
-		List<String> result5 = givenList.stream()
-				  .collect(collectingAndThen(toList(), ImmutableList::copyOf));
+	//	List<String> result5 = givenList.stream().collect(collectingAndThen(toList(), ImmutableList::copyOf));
 		
 		System.out.println(givenList.stream()
 				  .collect(joining(" ")));

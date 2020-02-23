@@ -58,7 +58,6 @@ public class Human {
     	
     	hl.sort(new Comparator<Human>()
     			{
-
 					@Override
 					public int compare(Human h1, Human h2) {
 						// TODO Auto-generated method stub
@@ -66,7 +65,6 @@ public class Human {
 					}
     		
     			});
-    	
     	
     	hl.sort(
     			(h1,h2)-> h1.getName().compareTo(h2.getName())

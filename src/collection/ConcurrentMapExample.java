@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit;
  * Even though Hashtable is thread safe, it is not very efficient. 
  * Another fully synchronized Map, Collections.synchronizedMap, does
  *  not exhibit great efficiency either. If we want thread-safety with high 
- *  throughput under high concurrency, these implementations aren’t the way to go.
+ *  throughput under high concurrency, these implementations arenï¿½t the way to go.
  * 
 Several default implementations are overridden, disabling the null key/value support:
 
@@ -63,7 +63,7 @@ public class ConcurrentMapExample {
 
 		//ConcurrentHashMap
 		/*
-		 * Before Java 8, the number of “segments” required was relative to the number of threads 
+		 * Before Java 8, the number of segments required was relative to the number of threads 
 		 * accessing the table so that the update in progress per segment would be no more than 
 		 * one most of time.
 		 * However, since Java 8, the constructors are only present for backward compatibility: 

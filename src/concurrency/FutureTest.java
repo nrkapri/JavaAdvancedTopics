@@ -15,29 +15,20 @@ public class FutureTest {
 		{
 			futuretasks[i] = new FutureTask(new Callable()
 					{
-
 						@Override
 						public Object call() throws Exception {
-
 							Random  r= new Random();
 							Thread.sleep(1000);
 							return r.nextInt(100);
-							
-							
 						}
-				
 					});
-			
 			new Thread(futuretasks[i]).start();
-			
 		}
-		
 		
 		int sum=0;
 		for(int i=0;i<5;i++)
 		{
 			System.out.println(futuretasks[i].get());
-			
 			sum+=(Integer)futuretasks[i].get();
 		}
 		
