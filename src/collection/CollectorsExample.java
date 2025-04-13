@@ -14,7 +14,7 @@ import java.util.function.Function;
 public class CollectorsExample {
 
 	public static void main(String[] args) {
-		List<String> givenList = Arrays.asList("a", "bb", "ccc", "dd");
+		List<String> givenList = Arrays.asList("a", "bb", "ccc", "dd","bb");
 		
 		List<String> result = givenList.stream()
 				  .collect(toList());
@@ -25,16 +25,19 @@ public class CollectorsExample {
 		
 		System.out.println(result1);
 		
-		Map<String, Integer> result3 = givenList.stream()
-				  .collect(toMap(Function.identity(), String::length));
-		System.out.println(result3);
-		//Function.identity() is just a shortcut for defining function that accepts and return the same value;
+
 		
 		//handle duplicates
 		Map<String, Integer> result4 = givenList.stream()
-				  .collect(toMap(Function.identity(), String::length, (i1, i2) -> i1));
+				  .collect(toMap(Function.identity(), String::length, (i1, i2) -> i1>i2?i1:i2));
 		
 		System.out.println(result4);
+
+
+		Map<String, Integer> result3 = givenList.stream()
+				.collect(toMap(Function.identity(), String::length));
+		System.out.println(result3);
+		//Function.identity() is just a shortcut for defining function that accepts and return the same value;
 
 	//	List<String> result5 = givenList.stream().collect(collectingAndThen(toList(), ImmutableList::copyOf));
 		

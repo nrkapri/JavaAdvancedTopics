@@ -45,7 +45,7 @@ class NameData
 
 	public static void main(String args[]) {
 		
-		NameData n1 = new NameData("A",1);
+	/*	NameData n1 = new NameData("A",1);
 		NameData n2 = new NameData("B",2);
 		
 		NameData n3 =  new FlatMapListOfListTest.NameData("C",3);
@@ -66,7 +66,7 @@ class NameData
 
 		n4.setChild(n5);
 
-		printIfAge3(n4);
+		printIfAge3(n4);*/
 	}
 
 
